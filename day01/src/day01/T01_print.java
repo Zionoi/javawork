@@ -96,6 +96,8 @@ public class T01_print {
 		 */
 		
 		// https://github.com/professorjiwon/javawork
+		// 구글 클래스룸 og4zckb
+		// 수업 자료 받는 곳
 		
 	}
 
