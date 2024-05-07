@@ -50,6 +50,20 @@ public class T01_print {
 		System.out.println("취미 : 헬스");
 		System.out.println("");
 		
+		//printf(%d,5)
+		//System.out.format(%d,5)
+		/*%b boolean
+		 * %d 10진 정수 형식으로 출력
+		 * %o 8진 정수 형식으로 출력
+		 * %x, %X 16진수 형식으로 출력 (0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,10)
+		 * %f 실수형float 형식으로 출력
+		 * %c 문자char로 형식으로 출력
+		 * %s 문자열String 형식으로 출력
+		 */
+		
+		
+		
+		
 		// 변수 - 저장공간에 미리 저장하고 필요할때 꺼내쓰는 것
 		/* 
 		 * - 정수 
