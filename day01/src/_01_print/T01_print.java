@@ -1,17 +1,22 @@
-package day01;
+package _01_print;
 
 public class T01_print {
 
 	public static void main(String[] args) {
 		// 주석 : 실행하지 않음(컴파일x)
 		// 한줄 주석 설명이나 기타 사항들을 적는다
-
+		
 		/*
 		 * 여러줄 주석 여러줄에 걸쳐 설명이나 
 		 * 특이사항들을 적을 때 사용
 		 */
 
-//		 기본 출력문 println -> 출력후 줄바꿈. System.out.println -> 메소드라고함
+		//단축키
+		// ctrl + /
+		/* ctrl + shift + / */
+
+		
+		//		 기본 출력문 println -> 출력후 줄바꿈. System.out.println -> 메소드라고함
 //		 한글자 이상(문자열) 출력 할 땐 ("") 쌍따옴표를 넣어준다
 		System.out.println("더조은 컴퓨터 학원");
 		System.out.println("이름 : 김요한");
