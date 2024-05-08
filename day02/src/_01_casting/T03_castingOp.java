@@ -1,5 +1,7 @@
 package _01_casting;
 
+import java.util.Scanner;
+
 public class T03_castingOp {
 
 	public static void main(String[] args) {
@@ -39,8 +41,10 @@ public class T03_castingOp {
 		re = num1 / (double)num2; 
 		re = (double)num1 / (double)num2;
 		
-		double re2 = num1 / num2;
-		System.out.println(re2);
+		double re2 = num1 / num2; // double = int / int 의 경우 이미 값에 나머지가 소멸된 상태로 double로 들어감으로 33.0으로 출력됨
+		System.out.println(re2); 
+		
+
 		
 	}
 

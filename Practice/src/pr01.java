@@ -10,12 +10,10 @@ public class pr01 {
 		int com = scan.nextInt();
 		System.out.println("수학 점수를 입력하시오 : ");
 		int mth = scan.nextInt();
-		int total = kor+com+mth;
-		double 평균 = (double)total/3; 
-		System.out.println("국어 : "+kor+"\n컴퓨터 : "+com+"\n영어 : "+mth+"\n총점 : "+total+"\n평균 : "+평균);
-		
-		
-		
+		int total = kor + com + mth;
+		double 평균 = (double) total / 3;
+		System.out.println("국어 : " + kor + "\n컴퓨터 : " + com + "\n영어 : " + mth + "\n총점 : " + total + "\n평균 : " + 평균);
+
 		/*----타입변환
 		 * 값의 타입을 다른 타입으로 변환하는 것
 		 * boolean을 제외한 7개의 기본형은 서로 타입변환 가능
@@ -95,9 +93,6 @@ public class pr01 {
 		 * float result = [float type] 연산자 [float type]
 		 * 
 		 */
-		
-		
-		
 
 	}
 
