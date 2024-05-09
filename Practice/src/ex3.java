@@ -81,26 +81,26 @@ public class ex3 {
 
 //2학년 7반 3번 이준기 남학생의 성적은 97.35이다.
 		
-		System.out.print("이름 : ");
-		String name1 = sc.next();
-		System.out.print("학년(숫자만) : ");
-		int grade = sc.nextInt();
-		System.out.print("반(숫자만) : ");
-		int cls = sc.nextInt();
-		System.out.print("번호(숫자만) : ");
-		int num9 = sc.nextInt();
-		System.out.print("성별(M/F) : ");
-		char gen = sc.next().charAt(0);
-		System.out.print("성적(소수점 둘째 자리까지 : ");
-		double p1 = sc.nextDouble();
-		
-		if (gen == 'M' || gen == 'm') {
-			System.out.printf("%d학년 %d반 %d번 %s 남학생의 성적은 %.2f이다.",grade,cls,num9,name1,p1);
-			
-		}else {
-			System.out.printf("%d학년 %d반 %d번 %s 여학생의 성적은 %.2f이다.",grade,cls,num9,name1,p1);
-		}
-		
+//		System.out.print("이름 : ");
+//		String name1 = sc.next();
+//		System.out.print("학년(숫자만) : ");
+//		int grade = sc.nextInt();
+//		System.out.print("반(숫자만) : ");
+//		int cls = sc.nextInt();
+//		System.out.print("번호(숫자만) : ");
+//		int num9 = sc.nextInt();
+//		System.out.print("성별(M/F) : ");
+//		char gen = sc.next().charAt(0);
+//		System.out.print("성적(소수점 둘째 자리까지 : ");
+//		double p1 = sc.nextDouble();
+//		
+//		if (gen == 'M' || gen == 'm') {
+//			System.out.printf("%d학년 %d반 %d번 %s 남학생의 성적은 %.2f이다.",grade,cls,num9,name1,p1);
+//			
+//		}else {
+//			System.out.printf("%d학년 %d반 %d번 %s 여학생의 성적은 %.2f이다.",grade,cls,num9,name1,p1);
+//		}
+//		
 		
 //		if (gen == 'M' || gen =='m') {
 //			String sgen = "남학생";			
@@ -114,13 +114,35 @@ public class ex3 {
 //나이를 키보드로 입력 받아 13세 이하면 "어린이"를 출력
 //13세초과 ~ 19세 이하이면 "청소년" 출력
 //19세초과이면 "성인" 출력
-
+//		System.out.println("나이를 입력하시오(숫자만) :  ");
+//		int age6 = sc.nextInt();
+//		if ( age6 <= 13) {
+//			System.out.println("어린이");
+//		}else if ( age6 > 19 ) {
+//			System.out.println("성인");
+//		}
+//		else {
+//			System.out.println("청소년");
+//		}
+		
 //7. 실습문제
 //국어, 영어, 수학에 대한 점수를 키보드를 이용해 정수로 입력 받고, 
 //세 과목에 대한 합계(국어+영어+수학)와 평균(합계/3.0)을 구하세요.
 //세 과목의 점수와 평균을 가지고 합격 여부를 처리하는데
 //세 과목 점수가 각각 40점 이상이면서 평균이 60점 이상일 때 합격, 아니라면 불합격을 출력하세요.
-
+		System.out.println("국어 영어 수학 점수를 차례대로 입력하시오(ex_ 75 65 25) : ");
+		int kor7 = sc.nextInt();
+		int eng7 = sc.nextInt();
+		int mth7 = sc.nextInt();
+		int total7 = kor7 + eng7 + mth7 ;
+		double average = (double) (total7/3);
+		if (kor7 >= 40 && eng7 >= 40 && mth7 >= 40 && average >= 60) {
+			System.out.println("합격");
+		}else {
+			System.out.println("불합격");
+		}
+		
+		
 //ex.
 //국어 : 60
 //영어 : 80
