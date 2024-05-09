@@ -130,31 +130,38 @@ public class ex3 {
 //세 과목에 대한 합계(국어+영어+수학)와 평균(합계/3.0)을 구하세요.
 //세 과목의 점수와 평균을 가지고 합격 여부를 처리하는데
 //세 과목 점수가 각각 40점 이상이면서 평균이 60점 이상일 때 합격, 아니라면 불합격을 출력하세요.
-		System.out.println("국어 영어 수학 점수를 차례대로 입력하시오(ex_ 75 65 25) : ");
-		int kor7 = sc.nextInt();
-		int eng7 = sc.nextInt();
-		int mth7 = sc.nextInt();
-		int total7 = kor7 + eng7 + mth7 ;
-		double average = (double) (total7/3);
-		if (kor7 >= 40 && eng7 >= 40 && mth7 >= 40 && average >= 60) {
-			System.out.println("합격");
-		}else {
-			System.out.println("불합격");
-		}
-		
-		
-//ex.
-//국어 : 60
-//영어 : 80
-//수학 : 40
+		//ex.
+		//국어 : 60
+		//영어 : 80
+		//수학 : 40
 
-//합계 : 180
-//평균 : 60.0
-//합격
+		//합계 : 180
+		//평균 : 60.0
+		//합격
+		
+//		System.out.println("국어 영어 수학 점수를 차례대로 입력하시오(ex_ 75 65 25) : ");
+//		int kor7 = sc.nextInt();
+//		int eng7 = sc.nextInt();
+//		int mth7 = sc.nextInt();
+//		int total7 = kor7 + eng7 + mth7 ;
+//		double average = (double) (total7/3);
+//		if (kor7 >= 40 && eng7 >= 40 && mth7 >= 40 && average >= 60) {
+//			System.out.println("합격");
+//		}else {
+//			System.out.println("불합격");
+//		}
+		
+		
+
 
 //8. 실습문제
-//주민번호를 입력받아 나자인지 여자인지 출력하기
-
+//주민번호를 입력받아 남자인지 여자인지 출력하기
+		System.out.println("주민번호를 입력하시오(숫자만) : ");
+//		char num8 = sc.next
+		
+		
+		
+		
 //ex.
 //주민번호를 입력하세요(- 포함) : 123456-3123456
 
