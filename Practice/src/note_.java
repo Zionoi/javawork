@@ -36,6 +36,7 @@ public class note_ {
 				}System.out.println("*");
 		}
 		*/
+		
 
 	}
 
