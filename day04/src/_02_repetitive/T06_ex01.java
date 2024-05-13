@@ -106,8 +106,6 @@ public class T06_ex01 {
 		
 		//6. 이중 for문을 이용하여 아래와 같은 실행 결과가 출력되도록 코드를 작성하시오.
 		int sum = 5;
-		
-		/*	
 			for(int i=1; i<=sum; i++) {
 				
 				for (int j=1; j<=sum-i; j++) {
@@ -116,19 +114,61 @@ public class T06_ex01 {
 					for (int k=1; k<=2*i-1; k++) {
 						System.out.print("*");
 					}System.out.println();
-				}System.out.println();*/
+				}System.out.println();
 		
 		
-	//	07. 주사위의 눈이 6이 나올때까지 계속 반복해서 굴리고, 눈이 6이 되면 지금까지 주사위를 굴린 횟수까지 출력하는 코드를 작성하시오
-	//	(while문으로 반복, 주사위는 Math.random()으로 작성)
-	
-	int r = (int)(Math.random()*6)+1;
-		System.out.println(r);
+//		07. 주사위의 눈이 6이 나올때까지 계속 반복해서 굴리고, 눈이 6이 되면 지금까지 주사위를 굴린 횟수까지 출력하는 코드를 작성하시오
+//		(while문으로 반복, 주사위는 Math.random()으로 작성)
+		/*		int rollcount = 0;
+			
+				while(true) {
+					int dicecount = (int)(Math.random()*6)+1;
+					p++;
+					System.out.println(r);
+					
+				}
+				
+			System.out.println("주사위 굴린횟수 : "+p);
+				*/
+		/*		
+			 int rollCount = 0; // 주사위를 굴린 횟수 초기화
 		
+		     while (true) { // while(true) 조건이 참이면 무한히 반복하는 반복문
+		 int diceResult = (int) (Math.random() * 6) + 1; // 1부터 6까지의 랜덤한 숫자 생성
+		 rollCount++; // 주사위를 굴린 횟수 증가
+		 System.out.println(diceResult); // 주사위 결과 출력
 		
+		 if (diceResult == 6) {
+		     break; // 주사위의 눈이 6이 되면 반복문 종료
+		 }
+		     }
 		
-		
-		
+		     System.out.println("주사위를 6이 나올 때까지 굴린 횟수: " + rollCount);
+			*/	
+		/*		
+				
+		     int rc = 0;
+		     
+		     while(true) {
+		    	 int dc = (int)(Math.random()*6)+1;
+		    	 rc++;
+		    	 System.out.println(dc);
+		    	 if(dc==6)
+		    		 break;
+		     }
+		     
+		     System.out.println("주사위 돌린 횟수 : "+rc);
+		     
+		     
+		     
+		     
+		     
+		     */
+     
+     
+     
+     
+     
 		
 		
 		
