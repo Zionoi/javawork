@@ -34,14 +34,22 @@ public class T06_ex01 {
 		
 		//1. 1부터 100까지의 정수 중 5의 배수의 합계를 출력하는 프로그램을 작성하시오. 아래 코드에서 반복문을 이용하여 합계 연산을 처리하는 코드를 추가하시오.
 		/*		
-				int sum1 = 0 ;
-				for (int i =1; i<=100; i++) {
-					if(i%5==0) 
-						
+		풀이1		int sum1 = 0 ;
+				for (int i =5; i<=100; i+=5) {
+				
 						sum1= sum1 + i;
 					
 				}System.out.println("1~100까지 5의 배수의 합계는"+sum1);// 1~100까지의 5의 배수의 총합은 1050
-				*/
+		*/
+//		풀이2
+		/*
+				int sum=0;
+				for(int i=1; i<=100;i++) {
+					if(i%5==0)
+						sum+=i;
+				}
+		*/
+				
 		
 		//2. 1부터 100까지의 수 중 짝수와 홀수의 합을 각각 구하시오
 		/*		
@@ -61,14 +69,14 @@ public class T06_ex01 {
 				*/
 		
 		//3. 두 개의 주사위의 두 눈의 합이 6이 되는 모든 경우의 수를 출력하는 프로그램을 작성하시오
-/*		
-		for (int x=1; x<=6; x++) {
-			for (int y=1; y<=6; y++) {
-				if(x+y == 6) {
-					System.out.println("("+x+y+")"); 
-				}
-				}
-					*/
+			/*	
+				for (int x=1; x<=6; x++) {
+					for (int y=1; y<=6; y++) {
+						if(x+y == 6) {
+							System.out.println("("+x+y+")"); 
+						}
+						}
+							*/
 				
 		//4.이중 for문을 이용하여 아래와 같은 실행 결과가 출력되도록 코드를 작성하시오.
 		/*
@@ -96,8 +104,8 @@ public class T06_ex01 {
 		**
 		*
 	*/	
-				
-	/*	for(int i=5; i>=1; i--) {
+	/*			
+		for(int i=5; i>=1; i--) {
 			for(int j=1; j<=i; j++) {
 				System.out.print("*");
 			}System.out.println();
@@ -105,31 +113,35 @@ public class T06_ex01 {
 			*/
 		
 		//6. 이중 for문을 이용하여 아래와 같은 실행 결과가 출력되도록 코드를 작성하시오.
+		/*
 		int sum = 5;
-			for(int i=1; i<=sum; i++) {
-				
-				for (int j=1; j<=sum-i; j++) {
-					System.out.print(" ");
-				}
-					for (int k=1; k<=2*i-1; k++) {
-						System.out.print("*");
-					}System.out.println();
-				}System.out.println();
-		
+					for(int i=1; i<=sum; i++) {
+						
+						for (int j=1; j<=sum-i; j++) {
+							System.out.print(" ");
+						}
+							for (int k=1; k<=2*i-1; k++) {
+								System.out.print("*");
+							}System.out.println();
+						}System.out.println();
+				*/
 		
 //		07. 주사위의 눈이 6이 나올때까지 계속 반복해서 굴리고, 눈이 6이 되면 지금까지 주사위를 굴린 횟수까지 출력하는 코드를 작성하시오
 //		(while문으로 반복, 주사위는 Math.random()으로 작성)
-		/*		int rollcount = 0;
-			
-				while(true) {
-					int dicecount = (int)(Math.random()*6)+1;
-					p++;
-					System.out.println(r);
+		/*
+				int rollcount = 0;
 					
-				}
-				
-			System.out.println("주사위 굴린횟수 : "+p);
-				*/
+						while(true) {
+							int dicecount = (int)(Math.random()*6)+1;
+							rollcount++;
+							System.out.println(dicecount);
+							
+							if(dicecount==6)
+								break;
+						}
+						
+					System.out.println("주사위 굴린횟수 : "+rollcount);
+						*/
 		/*		
 			 int rollCount = 0; // 주사위를 굴린 횟수 초기화
 		
@@ -172,7 +184,7 @@ public class T06_ex01 {
 		
 		
 		
-		
+				
 		
 	}
 }
