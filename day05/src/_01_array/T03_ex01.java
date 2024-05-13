@@ -15,11 +15,12 @@ public class T03_ex01 {
 			총점 270	280	290
 			평균	90	93.	97.5
 		
-		*/
+		
 		int score [][] = new int[3][3];
+*/
 		Scanner sc = new Scanner(System.in);
 		
-		/*	
+	/*		
 			System.out.println("첫번째학생 국어점수 입력 : ");
 			score[0][0] = sc.nextInt();
 			System.out.println("첫번째학생 수학점수 입력 : ");
@@ -35,9 +36,9 @@ public class T03_ex01 {
 			score[1][2] = sc.nextInt();
 			
 			하나하나씩 받을수도 있지만
-			*/
-	
-		/*		// 점수를 한번에 다 받을수도 있다
+			
+		
+				// 점수를 한번에 다 받을수도 있다
 				System.out.println(1+".번째학생 국어, 수학, 컴퓨터 점수 입력 (ex-80 60 70): ");
 				score[0][0] = sc.nextInt();
 				score[0][1] = sc.nextInt();
@@ -47,21 +48,21 @@ public class T03_ex01 {
 				score[1][0] = sc.nextInt();
 				score[1][1] = sc.nextInt();
 				score[1][2] = sc.nextInt();
-			*/	
+				
 		for(int i=0; i<score.length; i++) { // score.length 행의 길이만큼 i를 반복
 			System.out.print(i+1+".번째학생 국어, 수학, 컴퓨터 점수 입력 (ex-80 60 70): ");
 			for(int j=0; j<score[i].length; j++) {
 				score[i][j] = sc.nextInt();
-
+		
 			}
 		}
 		
-	/*	sum += score[0][0] 학생별 점수 총합 구하려면 이렇게
+		sum += score[0][0] 학생별 점수 총합 구하려면 이렇게
 		sum += score[0][1]
-		sum += score[0][2]*/
-
+		sum += score[0][2]
+		
 			System.out.println("번호\t국어\t수학\t컴퓨터\t총점\t평균");
-			System.out.println("----------------------------");
+			System.out.println("--------------------------------------------");
 			for(int i=0; i<score.length; i++) { // for문 반복문으로 간단하게 가능
 				System.out.print(i+1+"\t");
 				int sum = 0;
@@ -71,36 +72,43 @@ public class T03_ex01 {
 						
 						sum += score[i][j]; //총점 // 1번째 학생의 총점이 들어있음으로 반복문 초반에 sum을 0으로 초기화해줘야함
 						
+						
+						 
 					}
 					System.out.print(sum+"\t");
 					System.out.printf("%.2f\n",(double)sum/score[i].length);// 평균구하는 식
 					//System.out.println((double)sum/score[i].length);// 평균구하는 식
 		
+			}
+		*/
+
+		//	-------------------------------------------------------------------------
+			int[][] score;
 		
-		
-		
-		
-		/*	-------------------------------------------------------------------------
-			int[][] score = new int[3][5];
-			Scanner sc = new Scanner(System.in);
 			int kor;
 			int mth;
 			int com;
 			int i =0;
+			int j =0;
 			
+			score = new int[i][3];
 			for( i=0; i<score.length-1;i++) {
-				for(int j = 0; j<score[i].length; j++) {
+				
 				System.out.println("국어, 수학 컴퓨터 점수를 차례대로 입력하시오(ex- 87 51 76) (입력한 학생수 "+i+"명) : ");
 			 kor = sc.nextInt();
 			 mth = sc.nextInt();
 			 com = sc.nextInt();
-				score [i][]
+			 score[i][0] = kor;
+			 score[i][1] = mth;
+			 score[i][2] = com;
+			 
+	//			score [i][]
 				i++;
-				p++;
+	//			p++;
 			
 			}
-			}
-			*/
+			
+			
 
 		/*	System.out.println("두번째 학생 국어, 수학 컴퓨터 점수를 차례대로 입력하시오(ex- 87 51 76) : ");
 			
@@ -125,8 +133,23 @@ public class T03_ex01 {
 				
 				
 				System.out.println(cla);
-				*/
-			}
+				
+
+		int[][]score = new int[3][3];
+		
+		for(int i=0; i<score.length;i++)
+			for(int j =0; j<score[i].length; j++)
+			System.out.print("번째 학생의 국어 수학 컴퓨터 점수를 입력하시오 : ");
+		int kor = sc.nextInt();
+		int mth = sc.nextInt();
+		int com = sc.nextInt();
+		
+		
+		*/
+		
+		
+		
+		
 	}
 
 }
