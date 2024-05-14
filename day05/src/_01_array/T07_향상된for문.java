@@ -50,12 +50,34 @@ public class T07_향상된for문 {
 		
 		//문제 3개를 넣을 수 있는 문자열 배열 만들어서 값을 넣고 10개짜리 배열을 만들어서 복사하여 넣기
 		//(index 5번부터 2개만 넣기)
-		String[] srtarr = {"서울","광주","강동"};
-		String[] newsrt = new String[10];
+		String[] strarr = {"서울","광주","강동"};
+		String[] newstr = new String[10];
 		
-		System.arraycopy(srtarr, 0, newsrt, 5, 2);
 		
-		System.out.println(Arrays.toString(newsrt));
+		// 라이브러리 사용
+		//System.arraycopy(strarr, 0, newstr, 5, 2); 
+		
+		// arraycopy 안쓰고 for문으로 하는것도 가능하다
+		/*for(int i=0; i<strarr.length-1; i++) {
+			newstr[i+5] = strarr[i];
+		}
+		*/
+		/*	
+			// 향상된 for문 사용
+			int index = 5;	//향상된for문은 배열을 전부 돌려야한다. 부분만 덮어쓰기 안됨
+			for(String str : strarr) {
+				newstr[index++] = str; //덮어쓰고싶은 위치의 인덱스번호를 지정
+			}
+			
+			System.out.println(Arrays.toString(newstr));
+			
+			*/
+		//문자를 숫자로
+		String num1 = "1";
+		int iNum = Integer.parseInt(num1); // String을 int로 강제 형변환
+		byte bNum = Byte.parseByte(num1);
+		
+		//숫자를 문자로 
 		
 		
 		
