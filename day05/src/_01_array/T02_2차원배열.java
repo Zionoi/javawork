@@ -4,6 +4,16 @@ public class T02_2차원배열 {
 
 	public static void main(String[] args) {
 				
+		/*
+		int[] iarray = nuew int[5];   열
+		int[][] iarray2 = nuew int[3][5];  행 열
+		int[][][] iarray3 = nuew int[2][3][5];  고 행 열
+		
+		
+		
+		
+		*/
+		
 				
 				// 2차원 배열 [행의index][열의index]
 				// 배열표시가 두개   
