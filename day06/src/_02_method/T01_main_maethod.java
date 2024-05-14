@@ -26,7 +26,7 @@ public class T01_main_maethod {
 		System.out.println(ob2.add(5, 6));
 		System.out.println(ob2.subtract(9, 7));
 		System.out.println(ob2.multiply(8, 5));
-		System.out.println(ob2.divide(8, 7));
+		System.out.printf("%.2f",ob2.divide(8, 7));
 
 	}
 
