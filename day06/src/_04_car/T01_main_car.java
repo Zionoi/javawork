@@ -31,7 +31,6 @@ public class T01_main_car {
 		ob1.power();
 		
 		
-
 	}
 
 }
