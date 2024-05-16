@@ -4,7 +4,7 @@ class A {
 	int aa = 10;
 }
 class B extends A{ //B는 A를 상속받음 
-	int bb = 200;  // 상속을 받았다 하더라도 별도로 각각 객체생성을 해야함
+	int bb = 200;  
 }
 class C extends A{ //C는 A를 상속받음
 	int cc = 5000;
@@ -16,6 +16,8 @@ class D extends C{ // D는 C로부터 상속받음. 그러므로 A도 사용가�
 public class T01_main_inheritance {
 
 	public static void main(String[] args) {
+		// 클래스를 생성했더라도 별도로 객체생성을 해야 사용가능
+		
 //		A a1 = new A(); // 객체생성
 //		System.out.println("a1.aa : "+a1.aa); 
 		
