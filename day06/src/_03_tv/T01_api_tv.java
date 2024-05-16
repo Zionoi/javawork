@@ -9,7 +9,8 @@ public class T01_api_tv {
 	int volume; //int는 값설정 안하면 0이 기본값
 	int channel = 1;
 	boolean power; //boolean의 기본값은 false
-	
+	//속성의 power와 메소드의 power는 저장공간이 다르므로 같은이름으로 선언가능
+	// main에서 호출할땐 이름뒤에()를 붙여서 구분. ()가있으면 메소드 없으면 속성
 	
 	//메소드 4개
 	void power( ) {
