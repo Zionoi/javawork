@@ -16,12 +16,12 @@ class D extends C{ // D는 C로부터 상속받음. 그러므로 A도 사용가�
 public class T01_main_inheritance {
 
 	public static void main(String[] args) {
-		// 클래스를 생성했더라도 별도로 객체생성을 해야 사용가능
+		// 
 		
 //		A a1 = new A(); // 객체생성
 //		System.out.println("a1.aa : "+a1.aa); 
 		
-		B b1 = new B(); // 객체생성
+		B b1 = new B(); // 객체생성 상속받은 A도 자동으로 객체가 올라옴
 		System.out.println("b1.aa : "+b1.aa);
 		System.out.println("b1.bb : "+b1.bb);
 

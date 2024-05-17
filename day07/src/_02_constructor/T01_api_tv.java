@@ -9,7 +9,7 @@ public class T01_api_tv {
 	
 	//기본 생성자
 	/*
-	T01_api_tv() {
+	T01_api_tv() { //기본생성자는 매개변수가있는 생성자가 먼저 하나라도있으면 자동으로 안만들어짐
 		System.out.println("기본 생성자");
 	}
 	*/	
