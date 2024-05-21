@@ -39,6 +39,14 @@ public class T03_polyRun {
 //		FireCar fCar3 = (FireCar)car2; 
 		// 컴파일오류 실행시 ClassCastException 오류. why? 최초객체생성시 부모타입으로 생성해서 자식객체는 생성되지 않음. 그래서 변환할수 없음
 	
+		//instanceof : 좌측의 객체가 우측의 타입으로 만들어졌느냐 검사(true, false)
+		FireCar fCar3 = null;
+		if(fCar3 instanceof FireCar) {
+			fCar3 = (FireCar)car2;
+		}else {
+			System.out.println("변환할수 없음");
+		}// 해당클래스의객체가 상속관계의 객체까지 같이 생성이 되었는지 직관적으로 파악할때 사용하면 좋음
+		
 	}
 
 }
