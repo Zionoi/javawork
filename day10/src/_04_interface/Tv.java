@@ -28,5 +28,14 @@ public class Tv implements RemoteControl {
 			this.volume = RemoteControl.MIN_VOLUME;
 		System.out.println("현재 음량 : "+this.volume);//그냥 volume하면 사용자의 입력값이 출력되어 제대로된값이 안나오므로 this.volume으로 인스턴스변수지정해준다
 	}
-
+	
+	@Override
+	public void search(String msg) { // 해당메소드는 디폴트메소드임. 무조건 구현하지않아도 에러가 뜨지 않음
+		System.out.println("msg");
+	}
+	public void info() {
+		System.out.println();
+	}
+	
+	
 }

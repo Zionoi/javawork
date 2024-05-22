@@ -1,9 +1,9 @@
 package ArrayList_EX;
 
 public class Book {
-	String title;
-	String author;
-	String publisher;
+	private String title;
+	private String author;
+	private String publisher;
 
 	
 	Book(){}
@@ -22,18 +22,18 @@ public class Book {
 	String getPublisher() {
 		return this.publisher;
 	}
-	void setTitle() {
+	void setTitle(String title) {
 		this.title = title;
 	}
-	void setAuthor() {
+	void setAuthor(String author) {
 		this.author = author;
 	}
-	void setPublisher() {
+	void setPublisher(String publisher) {
 		this.publisher = publisher;
 	}
-	
+	@Override
 	public String toString() {
-		return " 제목 : "+ title + " 저자 : " + author + " 출판사 : " + publisher+"\n";
+		return "제목 : "+ title + " 저자 : " + author + " 출판사 : " + publisher;
 	}
 
 

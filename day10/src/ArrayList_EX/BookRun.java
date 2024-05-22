@@ -2,6 +2,7 @@ package ArrayList_EX;
 
 public class BookRun {
 
+	
 	public static void main(String[] args) {
 		LibraryController lc = new LibraryController(new Member("김요한",32,"남"));
 		lc.insertBook(new Book("해리포터","조엔","맑은소리"));
@@ -15,9 +16,14 @@ public class BookRun {
 		System.out.println("------------");
 		System.out.println(lc.selectALL());
 		System.out.println("------------");
+		lc.searchBook("이클립스");
 		Member m = new Member("김요한",32,"남");
 		
 		lc.info();
+		
+		
+	
+		
 		
 	}
 

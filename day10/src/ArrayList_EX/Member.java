@@ -1,15 +1,15 @@
 package ArrayList_EX;
 
 public class Member {
-	String name;
-	int age;
-	String gender;
+	private String name;
+	private int age;
+	private String gender;
 
 	
 	Member(){}
-	Member(String title, int i, String gender){
+	Member(String title, int age, String gender){
 		this.name = title;
-		this.age = i;
+		this.age = age;
 		this.gender = gender;
 	}
 
@@ -22,16 +22,16 @@ public class Member {
 	String getGender() {
 		return this.gender;
 	}
-	void setTitle() {
+	void setTitle(String name) {
 		this.name = name;
 	}
-	void setAuthor() {
+	void setAuthor(int age) {
 		this.age = age;
 	}
-	void setGender() {
+	void setGender(String gender) {
 		this.gender = gender;
 	}
-	
+	@Override
 	public String toString() {
 		return "제목 : "+ name + "\n나이 : " + age + "\n성별 : " + gender;
 	}
