@@ -3,7 +3,7 @@ package ArrayList_EX;
 import java.util.ArrayList;
 
 public class LibraryController {
-	Member member; 							//멤버를 객체생성하여 필드에 저장
+	Member member; 	//Member라는 자료형인 인스턴스 변수						//멤버를 객체생성하여 필드에 저장
 	ArrayList<Book> aList = new ArrayList<Book>(); //어레이리스트로 객체 생성
 	
 	LibraryController(Member m) { 				//멤버객체를 매개변수로 받는 생성자

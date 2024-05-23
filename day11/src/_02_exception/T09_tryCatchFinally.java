@@ -19,10 +19,25 @@ public class T09_tryCatchFinally {
 			System.out.println("인덱스의 범위를 넘어섬");
 		} finally {
 			// 예외와 상관없이 무조건 실행
+			// return;이 있어도 수행
 			System.out.println("프로그램 종료");
-			
 		}
+		System.out.println("return; 이 있으면 수행 안함");
 		
+		//try나 catch안에 return;이 있다면 메소드는 끝나도 finally는 수행한다.
+		/*	
+			try {
+				
+				return;
+			}catch{
+				
+				return;
+				
+			}finally {
+				//메소드는 끝나지만 finally는 수행함
+			}System.out.println("수행안함");
+			
+			*/
 		
 		
 		
