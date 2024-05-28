@@ -54,8 +54,6 @@ public class T04_date {
 			e.printStackTrace();
 		}
 		
-		String st = "asbvbeg";
-		for(String stra : st)
 			
 		
 	}

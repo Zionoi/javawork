@@ -39,7 +39,7 @@ public class T03_regular {
 		//^ : ^ 헷이 []안에 들어있지않으면 무조건 이걸로 시작해야한다는 뜻임 
 		// 		^이 []안에 들어있으면 해당 글자는 빼라는 뜻
 		//이메일체크
-		regExp = "^[a-zA-Z0-9]+\\w+@\\w+\\.\\w+(\\.\\w+)$";
+		regExp = "^[a-zA-Z0-9]+\\w+@\\w+\\.\\w+(\\.\\w+)?";
 		
 		data = "kyh00827@google.com";
 		result = Pattern.matches(regExp, data); //정규식 비교하는 메소드 boolean으로 반환된다
