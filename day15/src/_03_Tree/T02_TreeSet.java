@@ -51,7 +51,6 @@ public class T02_TreeSet {
 			System.out.println("당첨번호 : "+lotto);
 			System.out.println("1등 당첨된 회차 : "+lottoCatch);
 			System.out.println("총 사용 금액 : "+new DecimalFormat("#,###.##").format(buyCount*1000L)+"원\n1등 당첨횟수 : "+collectCount+"\n2등 당첨횟수 : "+_2ndCount);
-			System.out.println();
 //			System.out.println("총 사용 금액 : "+(long)(buyCount*1000)+"원\n당첨횟수 : "+collectCount);
 			
 /*		
