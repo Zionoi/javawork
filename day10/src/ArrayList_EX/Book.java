@@ -1,16 +1,22 @@
 package ArrayList_EX;
 
-public class Book {
+import java.util.Objects;
+
+
+
+public class Book implements Comparable<Book>{
 	private String title;
 	private String author;
-	private String publisher;
+	private String category;
+	private int price;
 
 	
-	Book(){}
-	Book(String title, String author, String publisher){
+	Book(){	}
+	Book(String title, String author, String category, int price){
 		this.title = title;
 		this.author = author;
-		this.publisher = publisher;
+		this.category = category;
+		this.price = price;
 	}
 
 	String getTitle() {
@@ -19,8 +25,11 @@ public class Book {
 	String getAuthor() {
 		return this.author;
 	}
-	String getPublisher() {
-		return this.publisher;
+	String category() {
+		return this.category;
+	}
+	int getPublisher() {
+		return this.price;
 	}
 	void setTitle(String title) {
 		this.title = title;
@@ -28,14 +37,49 @@ public class Book {
 	void setAuthor(String author) {
 		this.author = author;
 	}
-	void setPublisher(String publisher) {
-		this.publisher = publisher;
+	void category(String category) {
+		this.category = category;
+	}
+	void setPublisher(int price) {
+		this.price = price;
 	}
 	@Override
 	public String toString() {
-		return "제목 : "+ title + " 저자 : " + author + " 출판사 : " + publisher;
+		return "제목 : "+ title + " 저자 : " + author + " 장르 : "+ category + " 금액 : "  + price;
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(price);
 	}
 
+	/*	@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			Book other = (Book) obj;
+			return Objects.equals(price, other.price);
+		}*/
+	
+	public boolean equals(Object obj) {
+		if(obj instanceof Book) {
+			Book book = (Book)obj;
+			return price == book.price;
+		}
+		return false;
+	
+	
+		
 
-
+	}
+	@Override
+	public int compareTo(Book o) {
+		return this.getTitle().compareTo(o.getTitle());
+	}
+	
+	
+	
 }

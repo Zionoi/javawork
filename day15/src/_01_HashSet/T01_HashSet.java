@@ -59,7 +59,7 @@ public class T01_HashSet {
 //			if(s.equals("oracle"))
 			// 그냥 ca를 쓰면 주소랑 비교하게됨. str을 제대로호출해야 이름 비교 가능
 			if(ca.str.equals("oracle"))
-//				set2.remove(ca); // 바로 set2에서 지우면 오류가 뜸. 직접set2에 접근할수없고 변수 i를 통해 지워야함
+//				set2.remove(ca); // 바로 set2에서 지우면 오류가 뜸. 직접set2에 접근할수없고 변수 Iterator에 넣고 지워야함
 				i.remove(); // 이렇게 해야함
 		}
 		

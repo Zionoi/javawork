@@ -20,7 +20,7 @@ public class T02_HashSet {
 			set1.add(obj);
 		}
 			
-//		iteratorPrint(set1.iterator()); // 중복값은 제외하고 출력하는데 1은 두개가 출력됨. 이유는 String 1과 Integer 1 은 자료형이 다르므로 다른 객체라고 인식하기 때문
+//		iteratorPrint(set1.iterator()); // 중복값은 제외하고 출력하는데 1은 두개가 출력됨. 이유는 String 1과 Integer 1 은 자료형이 다르므로 다른 객체라고 인식하기 때문 해시코드랑 오버라이딩하면 같은객체로 인식한다
 		
 		
 		//객체 전체 삭제

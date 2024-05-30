@@ -15,9 +15,9 @@ public class LibraryController {
 	}
 	
 	void insertBook() {
-		aList.add(new Book("파이썬","아무개","김앤북"));
-		aList.add(new Book("mysql","가나다","북북"));
-		aList.add(new Book("체육","라마바","길벗"));
+		aList.add(new Book("파이썬","아무개","교육",20000));
+		aList.add(new Book("mysql","가나다","교육", 25000));
+		aList.add(new Book("체육","라마바","예체능", 22000));
 	}
 	
 	void insertBook(Book b) {
