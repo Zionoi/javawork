@@ -63,7 +63,7 @@ public class Book implements Comparable<Book>{
 			Book other = (Book) obj;
 			return Objects.equals(price, other.price);
 		}*/
-	
+	@Override
 	public boolean equals(Object obj) {
 		if(obj instanceof Book) {
 			Book book = (Book)obj;

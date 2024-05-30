@@ -89,9 +89,9 @@ public class BookController {
 		*/
 
 	//	ascBook() : 오름차순 정렬
-	
 	public int ascBook() {
 		arrBook.sort(null); // String클래스 sotr()메소드는 compareTo()가 호출됨. 
+		
 		return 1;
 	}
 	

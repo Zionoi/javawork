@@ -1,7 +1,6 @@
 package ArrayList_EX;
 
 import java.util.*;
-import java.util.Scanner;
 
 public class BookRun {
 	static BookController book1 = new BookController();  //인스턴스 변수는 객체생성해야만 생성할수 있다 객체생성 없이 사용하려면 static을 붙여 클래스 변수로 바꿔야한다
@@ -39,8 +38,8 @@ public class BookRun {
 		
 		switch (choice) {
 		case 1 : 
-			insertBook();
-			/*	
+//			insertBook();
+				
 				System.out.print("추가할 도서의 제목입력 : ");
 				String title = sc.nextLine();
 				System.out.print("추가할 도서의 저자입력 : ");
@@ -60,18 +59,18 @@ public class BookRun {
 				}else {
 					System.out.println("취소되었습니다.");
 				}
-				*/
+				
 			break;
 		case 2 :
 			listAll();
 			
-//			book1.listAll();
+/*			book1.listAll();
 			
-			/*if(book1.toString() == null)
+			if(book1.toString() == null)
 				System.out.println("책이 없습니다");
 			else
-				System.out.println(book1.toString());*/
-			break;
+				System.out.println(book1.toString());
+			break;*/
 			
 		case 3 :
 			
