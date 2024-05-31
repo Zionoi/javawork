@@ -2,7 +2,8 @@ package list_music;
 import java.util.*;
 import java.util.Objects;
 
-public class Music {
+
+public class Music implements Comparable<Music> {
 	private String title;
 	private String singer;
 	
@@ -42,10 +43,12 @@ public class Music {
 		Music other = (Music) obj;
 		return Objects.equals(singer, other.singer) && Objects.equals(title, other.title);
 	}
-	
-	/*	public int compareTo(Object o) {
-			return o;
-		}*/
+	@Override
+	public int compareTo(Music o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 		
 	
 	
