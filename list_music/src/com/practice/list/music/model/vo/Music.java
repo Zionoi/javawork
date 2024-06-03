@@ -1,9 +1,9 @@
-package list_music;
+package com.practice.list.music.model.vo;
 import java.util.*;
 import java.util.Objects;
 
 
-public class Music {
+public class Music implements Comparable<Music> {
 	private String title;
 	private String singer;
 	
@@ -44,13 +44,13 @@ public class Music {
 		return Objects.equals(singer, other.singer) && Objects.equals(title, other.title);
 	}
 	
-	//가수명을 내림차순으로 정렬해주는 메소드 오버라이드
 	
-	  // 가수명을 내림차순으로 정렬하는 메소드
-    public void descSinger() {
-  //      Collections.sort(list, new DescendingSinger());
-        System.out.println("가수 명을 내림차순으로 정렬하였습니다.");
-    }
+	
+	@Override
+	public int compareTo(Music o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 	
 	

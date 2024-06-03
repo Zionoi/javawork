@@ -1,7 +1,7 @@
 package _03_WildcardGenerics;
 
 public class Course {
-	// 모든 사람이면 등록 가능					//<?> 제네릭 안에 와일드카드를 넣으므로Object는 자동 상속됨
+	// 모든 사람이면 등록 가능					//<?> 제네릭 안에 와일드카드를 넣으므로Object는 자동 상속됨 = extends Object와 같은상태
 	static void registerCourse(Applicent<?> a) {
 		System.out.println(a.kind.getClass().getSimpleName() + "가 course에 등록함"); // .getClass().getSimpleName() 패키지경로가 포함되어있지 않는 클래스 이름만 나옴
 	}

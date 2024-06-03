@@ -27,6 +27,7 @@ public class T08_DaemonThread {
 
 	public static void main(String[] args) {
 		AutoSaveThread t = new AutoSaveThread();
+		//꼭 true를 써줘야한다.
 		t.setDaemon(true); // 데몬스레드는 꼭 start전에 시작해줘야한다
 		t.start();
 		
