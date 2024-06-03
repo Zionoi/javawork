@@ -28,44 +28,38 @@ public class MusicView {
 			sc.nextLine();
 			
 			switch (choice) {
-				case 1 : MusicController.addList(null);
-				break;
-		
-		
+				case 1 : 
+			
+					break;
+				
+				case 2 : mc.addAtZero(null);
+					break;	
+				case 3 : mc.printAll();
+					break;
+				case 4 : mc.searchMusic(null);
+					break;
+				case 5 : mc.removeMusic(null);
+					break;
+				case 6 : mc.setMusic(null, null);
+					break;
+				case 7 : mc.ascTitle();
+					break;
+				case 8 : mc.descSinger();
+					break;
+				case 9 : flag=true;
 			}
 		}
-	}
-	
-
-
-	
-    static void addList() {
- //   	MusicController.addList(null);
-    }
-    static void addAtZero() {
-		
-	}
-	static void printAll() {
-		
-	}
-	static void searchMusic() {
-		
-	}
-	static void removeMusic() {
-		
-	}
-	static void setMusic() {
-		
-	}
-	static void ascTitle() {
-		
-	}
-	  // 가수명을 내림차순으로 정렬하는 메소드
-    public static void descSinger() {
-////        Collections.sort(list, new DescendingSinger());
-//        System.out.println("가수 명을 내림차순으로 정렬하였습니다.");
-    }
     
-    
+	}
+	public void addList(Music music){
+	System.out.println("곡 명 입력 : ");
+	String name = sc.nextLine();
+	sc.nextLine();
+	System.out.println("가수명 입력 : ");
+	String singer = sc.nextLine();
+	sc.nextLine();
+	
+	mc.addList(name, singer));
+	}
     
 }

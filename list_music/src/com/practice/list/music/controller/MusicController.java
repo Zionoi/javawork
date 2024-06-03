@@ -10,24 +10,34 @@ public class MusicController {
 	
 	
 	//리스트 마지막에 값 저장 메소드
-	public static int addList(Music music) {
+	public int addList(Music music) {
+		try {
 		list.add(music);
-		
+		}
+		catch (Exception e) {
+			return 0;
+		}
 		return 1; //추가된 위치의 인덱스 반환
 	}
 	
 	//리스트 첫 번째에 값 저장 메소드
-	static int addAtZero(Music music) {
+	public int addAtZero(Music music) {
+		try {
+			
+		
 		list.add(0, music);
+		}catch (Exception e) {
+			return 0;
+		}
 		return 1; // 추가후 리스트의 곡 갯수 반환
 	}
 	
-	static List<Music> printAll() {
+	public List<Music> printAll() {
 		return list;
 	}
 	
 	//곡 명을 검색하는 메소드
-	static Music searchMusic(String title) {
+	public Music searchMusic(String title) {
 	    for (Music music : list) {
 	        if (music.getTitle().equals(title)) {
 	        	return music;
@@ -52,7 +62,7 @@ public class MusicController {
 	    }*/
 	
 	// Arrays.asList(null); : 어레이를 리스트 형태로
-	static Music removeMusic(String title) {
+	public Music removeMusic(String title) {
 		Iterator<Music> iterator = list.iterator();
 		while (iterator.hasNext()) {
 			Music music = iterator.next();
@@ -78,7 +88,7 @@ public class MusicController {
 	
 	
 	// 곡명으로 찾아 내용을 수정하는 메소드
-	public static Music setMusic(String title, Music music) {
+	public Music setMusic(String title, Music music) {
 		for(int i=0;i<list.size();i++) {
 			if(list.get(i).getTitle().equals(title)) {
 				list.set(i, music);
@@ -87,12 +97,12 @@ public class MusicController {
 		}return null; // 일치하는 음악 못찾으면 null 리턴	
 	}
 
-	public static int ascTitle() {
+	public int ascTitle() {
 		list.sort(null);
 		return 1;
 	}
 	   // 가수명을 내림차순으로 정렬하는 메소드
-	public static int descSinger() {
+	public int descSinger() {
         MusicView view = new MusicView();
         view.descSinger(); // 가수 명 내림차순 정렬 알림
         return 1;
