@@ -47,9 +47,9 @@ public class Music implements Comparable<Music> {
 	
 	
 	@Override
-	public int compareTo(Music o) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int compareTo(Music o1) {
+			return title.compareTo(o1.getTitle());
+		
 	}
 	
 	

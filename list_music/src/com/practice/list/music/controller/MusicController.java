@@ -8,7 +8,12 @@ import com.practice.list.music.view.MusicView;
 public class MusicController {
 	private static ArrayList<Music> list = new ArrayList<>();
 	
-	
+	public MusicController () {
+		list.add(new Music("보고싶다", "김범수"));
+		list.add(new Music("하하하", "하하하"));
+		list.add(new Music("가가가", "나나나"));
+		list.add(new Music("싶다", "범수"));
+	}
 	//리스트 마지막에 값 저장 메소드
 	public int addList(Music music) {
 		try {
@@ -99,7 +104,8 @@ public class MusicController {
 	
 	public int ascTitle() {
 		try {
-			list.sort(null);
+			Collections.sort(list);
+			System.out.println(list);
 			return 1;
 		}catch (Exception e) {
 			return 0;

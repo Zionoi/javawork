@@ -41,8 +41,8 @@ public class MusicView {
 					break;
 				case 6 : setMusic();
 					break;
-//				case 7 : ascTitle();
-//					break;
+				case 7 : ascTitle();
+					break;
 //				case 8 : mc.descSinger();
 //					break;
 				case 9 : 
