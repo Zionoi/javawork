@@ -31,7 +31,7 @@ public class MusicController {
 		}
 		return 1; // 추가후 리스트의 곡 갯수 반환
 	}
-	
+	// 전체 리스트를 출력하는 메소드
 	public List<Music> printAll() {
 		return list;
 	}
@@ -96,15 +96,20 @@ public class MusicController {
 			}
 		}return null; // 일치하는 음악 못찾으면 null 리턴	
 	}
-
+	
 	public int ascTitle() {
-		list.sort(null);
-		return 1;
+		try {
+			list.sort(null);
+			return 1;
+		}catch (Exception e) {
+			return 0;
+		}
+		
 	}
 	   // 가수명을 내림차순으로 정렬하는 메소드
 	public int descSinger() {
         MusicView view = new MusicView();
-        view.descSinger(); // 가수 명 내림차순 정렬 알림
+//        view.descSinger(); // 가수 명 내림차순 정렬 알림
         return 1;
     }
 	

@@ -1,6 +1,6 @@
-package list_music;
+package _06_Network;
 
-public class Run {
+public class ClientProgram {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
