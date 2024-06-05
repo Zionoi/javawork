@@ -1,4 +1,4 @@
-package _06_Network;
+package _06_Network.Ex;
 
 import java.io.BufferedReader;
 import java.io.IOException;

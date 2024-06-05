@@ -46,7 +46,7 @@ public class note {
 	        System.out.println(answer);
 	    
 		
-		S
+		
 		
 	}
 

@@ -1,4 +1,4 @@
-package _06_Network;
+package _06_Network.Ex;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -23,8 +23,8 @@ public class ClientProgram {
 		
 		try {
 //			로컬로 할거니 내 pc ip 얻어오기()
-			String serverIp =InetAddress.getLocalHost().getHostAddress(); 
-			int port = 9999; // ServerProgram에서 지정한 포트번호 그대로 가져온다
+			String serverIp ="192.168.50.50"; 
+			int port = 9004; // ServerProgram에서 지정한 포트번호 그대로 가져온다
 			
 //			1) 서버에 연결 요청 보내는 구문 (요청하고자 하는 서버의 ip주소와 포트번호를 제시
 			socket = new Socket(serverIp, port);
@@ -39,11 +39,11 @@ public class ClientProgram {
 			System.out.println(br.readLine());
 			
 			while(true) {
-				System.out.print("클라이언트 : ");
+				System.out.print("김요한 : ");
 				pw.println(sc.nextLine()); // 변수에 담아서 보내도 됨
 				pw.flush(); // 쌓아두지않고 바로 보냄
 				
-				System.out.println("서버 : " + br.readLine());
+				System.out.println("김민석 : " + br.readLine());
 				
 			}
 			
