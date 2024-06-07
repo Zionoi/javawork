@@ -1,4 +1,4 @@
-package _07_Socket;
+package 끝말잇기;
 
 import java.io.BufferedReader;
 import java.io.IOException;

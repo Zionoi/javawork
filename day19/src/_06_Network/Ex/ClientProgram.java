@@ -43,7 +43,7 @@ public class ClientProgram {
 				pw.println(sc.nextLine()); // 변수에 담아서 보내도 됨
 				pw.flush(); // 쌓아두지않고 바로 보냄
 				
-				System.out.println("김민석 : " + br.readLine());
+				System.out.println("강민석 : " + br.readLine());
 				
 			}
 			
