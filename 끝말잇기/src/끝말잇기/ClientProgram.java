@@ -32,6 +32,7 @@ public class ClientProgram {
 
 					System.out.print("클라이언트 : ");
 					String sendMsg = sc.nextLine();
+					
 					pw.println(sendMsg); 
 					pw.flush(); 
 					System.out.println("서버 : " + br.readLine());

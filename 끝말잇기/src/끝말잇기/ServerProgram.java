@@ -41,9 +41,15 @@ public class ServerProgram {
 						}
 						System.out.println("클라이언트 : " + msg); // while 조건문에서 리드라인 이미 읽어옴
 					
+						System.out.println(msg.charAt(msg.length()-1)+" 으로 시작하는 단어는?");
 						System.out.print("서버 : "  );
-						pw.println(sc.nextLine()); // 키보드로 적은 내용을 출력 할수 있게 해줌
+						if(sc.nextLine().charAt(0) == msg.charAt(msg.length()-1)) {
+						pw.println(); // 키보드로 적은 내용을 출력 할수 있게 해줌
 						pw.flush(); // 그걸 곧바로 보냄
+						}else {
+							System.out.println("잘못 입력하셨습니다 다시 입력하십시오");
+						}
+						
 					}
 				}
 			}
