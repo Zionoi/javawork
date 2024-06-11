@@ -31,23 +31,26 @@ public class ServerProgram {
 					pw.println("환영합니다 😊😊😊😊😊😊🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔"); 
 			
 					pw.flush(); // 버퍼에 쌓아두지않고 바로 보냄
-				    String msg = null;
-					while((msg = br.readLine()) != null) {
-						
-						
-						if(msg.equals("exit")) {
-							System.out.println("채팅을 종료합니다");
-							break;
-						}
-						System.out.println("클라이언트 : " + msg); // while 조건문에서 리드라인 이미 읽어옴
-					
-						System.out.println(msg.charAt(msg.length()-1)+" 으로 시작하는 단어는?");
-						System.out.print("서버 : "  );
-						if(sc.nextLine().charAt(0) == msg.charAt(msg.length()-1)) {
-						pw.println(); // 키보드로 적은 내용을 출력 할수 있게 해줌
-						pw.flush(); // 그걸 곧바로 보냄
-						}else {
-							System.out.println("잘못 입력하셨습니다 다시 입력하십시오");
+					String msg = null;
+	                while ((msg = br.readLine()) != null) {
+	                    if (msg.equals("exit")) {
+	                        System.out.println("채팅을 종료합니다");
+	                        break;
+	                    }
+
+	                    System.out.println("클라이언트 : " + msg); // 클라이언트로부터 받은 메시지 출력
+	                    char lastChar = msg.charAt(msg.length() - 1); // 마지막 문자 추출
+	                    System.out.println(lastChar + " 으로 시작하는 단어는?");
+	                    System.out.print("서버 : ");
+
+	                    String sendMsg = sc.nextLine();
+	                    if (sendMsg.charAt(0) == lastChar) {
+	                        pw.println(sendMsg); // 올바른 단어를 전송
+	                        pw.flush(); // 그걸 곧바로 보냄
+	                    } else {
+	                        System.out.println("잘못 입력하셨습니다 다시 입력하십시오");
+	                        pw.println("잘못 입력하셨습니다. 다시 입력하십시오."); // 클라이언트에게 잘못된 입력 알림
+	                        pw.flush();
 						}
 						
 					}

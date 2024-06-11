@@ -28,16 +28,29 @@ public class ClientProgram {
 				PrintWriter pw = new PrintWriter(socket.getOutputStream());){
 				
 				System.out.println(br.readLine());
+				System.out.print("클라이언트 : ");
+				String sendMsg = sc.nextLine();
+				pw.println(sendMsg);
+				pw.flush();
 				while(true) {
+					  String serverMsg = br.readLine();
+	                    System.out.println("서버 : " + serverMsg);
+	                    char lastChar = serverMsg.charAt(serverMsg.length() - 1);
+	                    System.out.println(lastChar + " 으로 시작하는 단어는?");
+	                    
+	                    System.out.print("클라이언트 : ");
+	                    sendMsg = sc.nextLine();
+	                    if (sendMsg.charAt(0) == lastChar) {
+	                        pw.println(sendMsg);
+	                        pw.flush(); // 그걸 곧바로 보냄
+	                    } else {
+	                        System.out.println("잘못 입력하셨습니다 다시 입력하십시오");
+	                        pw.println("잘못 입력하셨습니다. 다시 입력하십시오."); // 클라이언트에게 잘못된 입력 알림
+	                        pw.flush();
+	                    }
 
-					System.out.print("클라이언트 : ");
-					String sendMsg = sc.nextLine();
-					
-					pw.println(sendMsg); 
-					pw.flush(); 
-					System.out.println("서버 : " + br.readLine());
-					if(sendMsg.equals("exit")){
-						break;
+	                    if (sendMsg.equals("exit")) {
+	                        break;
 					}
 				}
 				System.out.println("서버와 연결 해제함");
