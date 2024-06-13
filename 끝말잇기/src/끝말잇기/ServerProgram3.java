@@ -38,8 +38,8 @@ public class ServerProgram3 {
                 JButton button = new JButton("전송"); // 전송 버튼 생성
                 JTextPane textPane = new JTextPane(); // 메시지 로그를 출력할 JTextPane
                 textPane.setEditable(false); // 메시지 로그는 편집 불가
- //               DefaultCaret caret = (DefaultCaret) textPane.getCaret();
- //               caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE); // 자동 스크롤을 위한 설정
+                DefaultCaret caret = (DefaultCaret) textPane.getCaret();
+                caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE); // 메시지로그 자동 스크롤을 위한 설정
 
                 // JPanel에 입력 필드와 버튼 추가
                 JPanel panel = new JPanel(new BorderLayout());
