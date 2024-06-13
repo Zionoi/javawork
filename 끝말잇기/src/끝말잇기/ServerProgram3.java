@@ -31,15 +31,15 @@ public class ServerProgram3 {
                 frame.setPreferredSize(new Dimension(400, 300)); // 기본 프레임 크기 설정
 
                 JLabel label = new JLabel("서버와 통신 상태", SwingConstants.LEFT); // 서버 상태를 표시할 레이블
-                JTextArea inputArea = new JTextArea(3, 20); // 입력 필드를 JTextField 대신 JTextArea로 변경
+                JTextArea inputArea = new JTextArea(3, 20); // 입력 필드를 JTextField 대신 JTextArea로 변경 줄바꿈 및 여러줄 입력을 하기 위함
                 inputArea.setLineWrap(true);
                 inputArea.setWrapStyleWord(true);
                 JScrollPane inputScrollPane = new JScrollPane(inputArea); // JTextArea를 JScrollPane에 추가하여 스크롤 가능하게 함
                 JButton button = new JButton("전송"); // 전송 버튼 생성
                 JTextPane textPane = new JTextPane(); // 메시지 로그를 출력할 JTextPane
                 textPane.setEditable(false); // 메시지 로그는 편집 불가
-                DefaultCaret caret = (DefaultCaret) textPane.getCaret();
-                caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE); // 자동 스크롤을 위한 설정
+ //               DefaultCaret caret = (DefaultCaret) textPane.getCaret();
+ //               caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE); // 자동 스크롤을 위한 설정
 
                 // JPanel에 입력 필드와 버튼 추가
                 JPanel panel = new JPanel(new BorderLayout());
