@@ -27,7 +27,7 @@ public class ServerProgram3 {
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 JFrame frame = new JFrame("John chat"); // JFrame 생성 및 타이틀 설정
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // 닫기 버튼 클릭 시 프로그램 종료
+               frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // 닫기 버튼 클릭 시 프로그램 종료
                 frame.setPreferredSize(new Dimension(400, 300)); // 기본 프레임 크기 설정
 
                 JLabel label = new JLabel("서버와 통신 상태", SwingConstants.LEFT); // 서버 상태를 표시할 레이블
@@ -62,7 +62,7 @@ public class ServerProgram3 {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        try (ServerSocket server = new ServerSocket(port, 0, InetAddress.getByName("0.0.0.0"))) { // 모든 IP 주소에서 접근 허용
+						try (ServerSocket server = new ServerSocket(port/*, 0, InetAddress.getByName("0.0.0.0")*/)) { // 모든 IP 주소에서 접근 허용
                             appendToPane(textPane, "클라이언트의 요청을 기다리고 있음... 로딩중...\n", false);
                             Socket socket = server.accept(); // 클라이언트 연결 요청 수락
                             appendToPane(textPane, socket.getInetAddress().getHostAddress() + "가 연결요청 함\n", false);

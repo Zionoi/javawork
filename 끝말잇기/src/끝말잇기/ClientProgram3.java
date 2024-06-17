@@ -15,18 +15,8 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.JTextPane;
-import javax.swing.SwingConstants;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.SimpleAttributeSet;
-import javax.swing.text.StyleConstants;
-import javax.swing.text.StyledDocument;
+import javax.swing.*;
+import javax.swing.text.*;
 
 public class ClientProgram3 {
 
@@ -46,13 +36,16 @@ public class ClientProgram3 {
                 JTextArea inputArea = new JTextArea(3, 20); // 입력을 위한 JTextArea 생성
                 inputArea.setLineWrap(true); // 텍스트가 자동으로 줄 바꿈되도록 설정
                 inputArea.setWrapStyleWord(true); // 단어 단위로 줄 바꿈되도록 설정
+                JScrollPane inputScrollPane = new JScrollPane(inputArea);
                 JButton button = new JButton("전송"); // 전송 버튼 생성
                 JTextPane textPane = new JTextPane(); // 채팅 로그를 출력할 JTextPane 생성
                 textPane.setEditable(false); // 채팅 로그는 편집 불가로 설정
+                DefaultCaret caret = (DefaultCaret) textPane.getCaret();
+                caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE); // 메시지로그 자동 스크롤을 위한 설정
 
                 // 입력 필드와 버튼을 담을 JPanel 생성
                 JPanel panel = new JPanel(new BorderLayout());
-                panel.add(new JScrollPane(inputArea), BorderLayout.CENTER); // 입력 필드를 스크롤 가능한 형태로 패널에 추가
+                panel.add(inputScrollPane, BorderLayout.CENTER); // 입력 필드를 스크롤 가능한 형태로 패널에 추가
                 panel.add(button, BorderLayout.EAST); // 버튼을 패널의 오른쪽에 추가
 
                 // 컴포넌트를 프레임에 추가
@@ -90,13 +83,12 @@ public class ClientProgram3 {
                                 inputArea.addKeyListener(new KeyAdapter() {
                                     @Override
                                     public void keyPressed(KeyEvent e) {
-                                        if (e.getKeyCode() == KeyEvent.VK_ENTER) {
-                                            if (e.isAltDown()) {
+                                        if (e.getKeyCode() == KeyEvent.VK_ENTER && e.isAltDown()) {
                                                 inputArea.append("\n"); // Alt + Enter 키 입력 시 줄 바꿈 추가
-                                            } else {
+                                            } else if(e.getKeyCode() == KeyEvent.VK_ENTER){
                                                 sendMessage(pw, inputArea, textPane); // Enter 키 입력 시 메시지 전송
                                                 e.consume(); // 엔터키 이벤트 소비하여 새 줄 생성 방지
-                                            }
+                                            
                                         }
                                     }
                                 });
